@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Jovian Drift SOS</title>
+      <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+      <iframe id="bg-frame" src="./styles/effect.html"></iframe>
+
+    <form method="post" action="#">
+        <fieldset>
+            <legend>Pilot Credentials</legend>
+        
+        <label for="pilot-name">Pilot Name:</label>
+        <input type="text" required placeholder="Enter name" name="pilot_name" id="pilot-name">
+
+<label for="code">Access code</label>
+<input type="password" required name="access_code" id="code">
+
+<label for="email">Command Email:</label>
+<input type="email" required name="email" id="email">
+</fieldset>
+
+<fieldset>
+    <legend>Vessel Diagnostics</legend>
+<label for="hull">Hull Damage (%)</label>
+<input type="number" required name="hull_damage" id="hull">
+<label for="emergency-level">Emergency Level</label>
+<select name="emergency_level" required id="emergency-level">
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+    </select>
+</fieldset>
+
+<fieldset>
+<legend>Mission Log & Evidence</legend>
+<label for="sos">SOS Message</label>
+<textarea name="sos_message" id="sos" required rows="3"></textarea>
+
+<div>
+    <input type="checkbox" required name="quarantine" id="quarantine">
+    <label for="quarantine">I agree to quarantine protocols.</label>
+</div>
+</fieldset>
+<button type="submit">INITIATE TRANSMISSION</button>
+<button type="reset">RESET FORM</button>
+
+    </form>
+      <script src="./scripts/launch.js"></script>
+</body>
+</html>
